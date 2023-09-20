@@ -1,11 +1,11 @@
 import java.util.Random;
-
+import java.util.Scanner;
 public class ArrayMenu {
     
-    public int[] randomIntegers(int arraySize) {
-        int numbers[] = new int[arraySize];
+    public int[] randomIntegers() {
+        int numbers[] = new int[5];
         Random rand = new Random();
-        for (int i = 0; i < arraySize; i++) {
+        for (int i = 0; i < 5; i++) {
             numbers[i] = rand.nextInt(0,101);
         }
         return numbers;    
@@ -64,5 +64,38 @@ public class ArrayMenu {
             diff = array[j] - average;
             System.out.print( diff + ", " );
         }
+    }
+
+        public void printDisplayMenu(){
+        Scanner input = new Scanner(System.in);
+        int choice = 1;
+        while(choice!=5){
+        System.out.println("1.Find the minimum of the array \n2.Find minimum of the array \n3.Find the average of the array \n4.Find the sum of elements with an odd \n5.Find the sum of elements with an evem \n6.Exit \nPick an option: " );
+        choice = input.nextInt();
+            if(choice == 1){
+                System.out.println(findmin(randomIntegers()));
+            }
+            else if(choice == 2){
+                System.out.println(findmax(randomIntegers()));
+            }
+            else if(choice == 3){
+                findDiffFromAverage(randomIntegers());
+            }
+            else if(choice == 4){
+                findSumOdd(randomIntegers());
+            }
+            else if(choice == 5){
+                findSumEven(randomIntegers());
+            }
+            else if(choice == 6){
+                System.out.println("Exiting the program");
+                break;
+            }
+        }
+        
+    }
+    public static void main(String[] args) {
+        ArrayMenu a1 = new ArrayMenu();
+        a1.printDisplayMenu();
     }
 }
