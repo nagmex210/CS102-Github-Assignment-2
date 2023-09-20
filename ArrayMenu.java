@@ -1,3 +1,5 @@
+
+public class ArrayMenu {
 public int findmax(int[] array){
 int max = array[0];
 for (int i = 0; i < array.length; i++) {
@@ -16,6 +18,4 @@ public int findmin(int[] array){
     }
     return min;
 }
-public class ArrayMenu {
-
 }
