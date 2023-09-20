@@ -18,7 +18,7 @@ public int findmin(int[] array){
     }
     return min;
 }
-}
+
 
     private void findSumOdd(int[] array) {
         int sum = 0;
