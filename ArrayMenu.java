@@ -1,23 +1,26 @@
 
 public class ArrayMenu {
-public int findmax(int[] array){
-int max = array[0];
-for (int i = 0; i < array.length; i++) {
-    if(array[i]>max){
-        max = array[i];
-    }
-}
-return max;
-}
-public int findmin(int[] array){
-    int min = array[0];
+    
+    public int findmax(int[] array){
+    int max = array[0];
     for (int i = 0; i < array.length; i++) {
-        if(array[i]<min){
-            min = array[i];
+        if(array[i]>max){
+            max = array[i];
         }
     }
-    return min;
-}
+    return max;
+    }
+
+    
+    public int findmin(int[] array){
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if(array[i]<min){
+                min = array[i];
+            }
+        }
+        return min;
+    }
 
 
     private void findSumOdd(int[] array) {
@@ -34,5 +37,22 @@ public int findmin(int[] array){
             sum += array[i];
         }
         System.out.println("even sum is : " + sum);
+    }
+
+    
+    public static void findDiffFromAverage (int[] array){
+        int sum = 0;
+        for ( int i = 0; i < array.length; i++ ){
+            sum = sum + array[i];
+        }
+
+        int average = sum / array.length;
+
+       
+        for ( int j = 0; j < array.length; j++ ){
+            int diff = 0;
+            diff = array[j] - average;
+            System.out.print( diff + ", " );
+        }
     }
 }
