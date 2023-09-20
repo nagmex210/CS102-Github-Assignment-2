@@ -55,14 +55,10 @@ public class ArrayMenu {
         for ( int i = 0; i < array.length; i++ ){
             sum = sum + array[i];
         }
-
+        
         int average = sum / array.length;
-
-       
         for ( int j = 0; j < array.length; j++ ){
-            int diff = 0;
-            diff = array[j] - average;
-            System.out.print( diff + ", " );
+            System.out.print( array[j] - average + ", " );
         }
     }
 }
