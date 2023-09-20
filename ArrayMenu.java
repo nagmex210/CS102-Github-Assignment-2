@@ -66,7 +66,8 @@ public class ArrayMenu {
         Scanner input = new Scanner(System.in);
         int choice = 1;
         while(choice!=5){
-        System.out.println("1.Find the minimum of the array \n2.Find minimum of the array \n3.Find the average of the array \n4.Find the sum of elements with an odd \n5.Find the sum of elements with an evem \n6.Exit \nPick an option: " );
+        System.out.println();
+        System.out.println("1.Find the minimum of the array \n2.Find minimum of the array \n3.Display each element's difference from the 3average of the array \n4.Find the sum of elements with an odd \n5.Find the sum of elements with an evem \n6.Exit \nPick an option: " );
         choice = input.nextInt();
             if(choice == 1){
                 System.out.println(findmin(randomIntegers()));
