@@ -1,5 +1,15 @@
+import java.util.Random;
 
 public class ArrayMenu {
+    
+    public int[] randomIntegers(int arraySize) {
+        int numbers[] = new int[arraySize];
+        Random rand = new Random();
+        for (int i = 0; i < arraySize; i++) {
+            numbers[i] = rand.nextInt(0,101);
+        }
+        return numbers;    
+    }
     
     public int findmax(int[] array){
     int max = array[0];
